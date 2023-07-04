@@ -16,6 +16,8 @@
             const pageno = getPageno();
             const result = await fetch(pageno);
             printContacts(result.contacts);
+            const pagination = getPagination(result);
+            printPagination(pagination);
 
             console.log(result);
         });
@@ -33,8 +35,8 @@
             </tr>
         </thead>
         <tbody id="tbody"></tbody>
-        <ul class="pagination" , id="pagination" style="display: flex; justify-content: center;"></ul>
     </table>
+    <ul class="pagination" , id="pagination" style="display: flex; justify-content: center;"></ul>
 </body>
 
 </html>
